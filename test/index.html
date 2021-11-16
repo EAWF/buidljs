@@ -99,8 +99,8 @@ account: <input type="number" id="seedToXprvp3" value="0"><br>
 seed: <input type="text" id="fromHDSeedp1" size="100"><br>
 derivationPath: <select id="fromHDSeedp2"><option value="44">44</option><option value="49">49</option><option value="84">84</option></select><br>
 account: <input type="text" id="fromHDSeedp3" value="0"><br>
-change: <input type="text" id="fromHDSeedp4" value="0"><br>
-index: <input type="text" id="fromHDSeedp5" value="0"><br>
+change: <input type="text" id="fromHDSeedp4" min="0" max="1" value="0"><br>
+index: <input type="text" id="fromHDSeedp5" min="0" max="2147483647" value="0"><br>
 <button id="fromHDSeed" onclick="return fromHDSeedbtn();">fromHDSeed</button>
 <br>
 <textarea id="fromHDSeedout" cols="130" rows="5"></textarea>
@@ -108,8 +108,8 @@ index: <input type="text" id="fromHDSeedp5" value="0"><br>
 <h3>fromXpub(xpub, change, index, type)</h3>
 <p>4 parameters (string, integer, integer, integer/string). First parameter is xpub (do not use ypub or zpub, that is for external use only. Your deriv path is already encoded in your xpub, use the last parameter in this function to select address type). Second is change address account. Third parameter is key index. Fourth is address type, 1 = legacy, 3 = p2sh-segwit, "b" = bech32 segwit</p>
 xpub: <input type="text" id="fromXpubp1" size="100"><br>
-change: <input type="number" id="fromXpubp2" value="0"><br>
-index: <input type="number" id="fromXpubp3" value="0"><br>
+change: <input type="number" id="fromXpubp2" min="0" max="1" value="0"><br>
+index: <input type="number" id="fromXpubp3" min="0" max="2147483647" value="0"><br>
 type: <select id="fromXpubp4"><option value="1">Legacy starts with 1</option><option value="3">P2SH Segwit starts with 3</option><option value="b">Bech32 starts with bc1</option></select><br>
 <button id="fromXpub" onclick="return fromXpubbtn();">fromXpub</button>
 <br>
@@ -129,7 +129,7 @@ index: <input type="number" id="xprvToWIF3" value="0"><br>
 <br><br>
 <h3>Bulk From Xpub/Ypub/Zpub</h3>
 xpub/ypub/zpub: <input type="text" id="bulkp1" size="100"><br>
-change: <input type="number" id="bulkp2" value="0"><br>
+change: <input type="number" id="bulkp2" min="0" max="1" value="0"><br>
 depth: <input type="number" id="bulkp3" value="20"><br>
 <button id="bulk" onclick="return bulk();">Generate</button>
 <br>
